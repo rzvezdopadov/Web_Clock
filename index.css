@@ -1,0 +1,831 @@
+html, body {
+  background: black;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+:root {
+  --size-clock: 600px;
+  --wand-mul-distance: -0.48;
+  --second-mul-distance: -0.425;
+  --minute-mul-distance: -0.376;
+  --hour-mul-distance: -0.32;
+  --wand-in-mul-distance: -0.27;
+}
+
+.clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock-wrapper {
+  position: fixed;
+  height: var(--size-clock);
+  width: var(--size-clock);
+  min-height: 400px;
+  min-width: 400px;
+  top: calc(50% - var(--size-clock) / 2);
+  left: calc(50% - var(--size-clock) / 2);
+  border-radius: 50%;
+  background-color: rgba(126, 252, 0, 0.5333333333);
+  box-shadow: 0 0 30px 10px rgba(126, 252, 0, 0.5019607843);
+  z-index: 100;
+}
+
+.clock-wrapper:hover {
+  animation: rotationClock 2s linear;
+}
+
+@keyframes rotationClock {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.clock-second-wrapper, .clock-minute-wrapper, .clock-hour-wrapper, .clock-wand-wrapper, .clock-wand-in-wrapper {
+  position: absolute;
+}
+
+.clock-wand-wrapper {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  z-index: 101;
+}
+
+.clock-wand {
+  position: absolute;
+  font-size: small;
+  color: #ffffff;
+}
+
+.clock-wand:nth-child(1) {
+  transform: rotate(0deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(2) {
+  transform: rotate(6deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(3) {
+  transform: rotate(12deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(4) {
+  transform: rotate(18deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(5) {
+  transform: rotate(24deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(6) {
+  transform: rotate(30deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(7) {
+  transform: rotate(36deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(8) {
+  transform: rotate(42deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(9) {
+  transform: rotate(48deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(10) {
+  transform: rotate(54deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(11) {
+  transform: rotate(60deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(12) {
+  transform: rotate(66deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(13) {
+  transform: rotate(72deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(14) {
+  transform: rotate(78deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(15) {
+  transform: rotate(84deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(16) {
+  transform: rotate(90deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(17) {
+  transform: rotate(96deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(18) {
+  transform: rotate(102deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(19) {
+  transform: rotate(108deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(20) {
+  transform: rotate(114deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(21) {
+  transform: rotate(120deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(22) {
+  transform: rotate(126deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(23) {
+  transform: rotate(132deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(24) {
+  transform: rotate(138deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(25) {
+  transform: rotate(144deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(26) {
+  transform: rotate(150deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(27) {
+  transform: rotate(156deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(28) {
+  transform: rotate(162deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(29) {
+  transform: rotate(168deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(30) {
+  transform: rotate(174deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(31) {
+  transform: rotate(180deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(32) {
+  transform: rotate(186deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(33) {
+  transform: rotate(192deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(34) {
+  transform: rotate(198deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(35) {
+  transform: rotate(204deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(36) {
+  transform: rotate(210deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(37) {
+  transform: rotate(216deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(38) {
+  transform: rotate(222deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(39) {
+  transform: rotate(228deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(40) {
+  transform: rotate(234deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(41) {
+  transform: rotate(240deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(42) {
+  transform: rotate(246deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(43) {
+  transform: rotate(252deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(44) {
+  transform: rotate(258deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(45) {
+  transform: rotate(264deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(46) {
+  transform: rotate(270deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(47) {
+  transform: rotate(276deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(48) {
+  transform: rotate(282deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(49) {
+  transform: rotate(288deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(50) {
+  transform: rotate(294deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(51) {
+  transform: rotate(300deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(52) {
+  transform: rotate(306deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(53) {
+  transform: rotate(312deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(54) {
+  transform: rotate(318deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(55) {
+  transform: rotate(324deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(56) {
+  transform: rotate(330deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(57) {
+  transform: rotate(336deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(58) {
+  transform: rotate(342deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(59) {
+  transform: rotate(348deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+.clock-wand:nth-child(60) {
+  transform: rotate(354deg) translateY(calc(var(--size-clock) * var(--wand-mul-distance)));
+}
+
+.clock-second-wrapper {
+  height: 90%;
+  width: 90%;
+  border-radius: 50%;
+  background-color: #166772;
+  z-index: 102;
+  animation-delay: 10s;
+}
+
+.clock-second {
+  position: absolute;
+  font-size: small;
+  color: #ffffff;
+}
+
+.clock-second:nth-child(1) {
+  transform: rotate(0deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(2) {
+  transform: rotate(6deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(3) {
+  transform: rotate(12deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(4) {
+  transform: rotate(18deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(5) {
+  transform: rotate(24deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(6) {
+  transform: rotate(30deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(7) {
+  transform: rotate(36deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(8) {
+  transform: rotate(42deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(9) {
+  transform: rotate(48deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(10) {
+  transform: rotate(54deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(11) {
+  transform: rotate(60deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(12) {
+  transform: rotate(66deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(13) {
+  transform: rotate(72deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(14) {
+  transform: rotate(78deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(15) {
+  transform: rotate(84deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(16) {
+  transform: rotate(90deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(17) {
+  transform: rotate(96deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(18) {
+  transform: rotate(102deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(19) {
+  transform: rotate(108deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(20) {
+  transform: rotate(114deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(21) {
+  transform: rotate(120deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(22) {
+  transform: rotate(126deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(23) {
+  transform: rotate(132deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(24) {
+  transform: rotate(138deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(25) {
+  transform: rotate(144deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(26) {
+  transform: rotate(150deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(27) {
+  transform: rotate(156deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(28) {
+  transform: rotate(162deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(29) {
+  transform: rotate(168deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(30) {
+  transform: rotate(174deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(31) {
+  transform: rotate(180deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(32) {
+  transform: rotate(186deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(33) {
+  transform: rotate(192deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(34) {
+  transform: rotate(198deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(35) {
+  transform: rotate(204deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(36) {
+  transform: rotate(210deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(37) {
+  transform: rotate(216deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(38) {
+  transform: rotate(222deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(39) {
+  transform: rotate(228deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(40) {
+  transform: rotate(234deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(41) {
+  transform: rotate(240deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(42) {
+  transform: rotate(246deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(43) {
+  transform: rotate(252deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(44) {
+  transform: rotate(258deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(45) {
+  transform: rotate(264deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(46) {
+  transform: rotate(270deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(47) {
+  transform: rotate(276deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(48) {
+  transform: rotate(282deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(49) {
+  transform: rotate(288deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(50) {
+  transform: rotate(294deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(51) {
+  transform: rotate(300deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(52) {
+  transform: rotate(306deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(53) {
+  transform: rotate(312deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(54) {
+  transform: rotate(318deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(55) {
+  transform: rotate(324deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(56) {
+  transform: rotate(330deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(57) {
+  transform: rotate(336deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(58) {
+  transform: rotate(342deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(59) {
+  transform: rotate(348deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+.clock-second:nth-child(60) {
+  transform: rotate(354deg) translateY(calc(var(--size-clock) * var(--second-mul-distance)));
+}
+
+.clock-minute-wrapper {
+  height: 80%;
+  width: 80%;
+  border-radius: 50%;
+  background-color: #a36c2d;
+  z-index: 103;
+}
+
+.clock-minute {
+  position: absolute;
+  font-size: x-small;
+  color: #ffffff;
+}
+
+.clock-minute:nth-child(1) {
+  transform: rotate(0deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(2) {
+  transform: rotate(6deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(3) {
+  transform: rotate(12deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(4) {
+  transform: rotate(18deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(5) {
+  transform: rotate(24deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(6) {
+  transform: rotate(30deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(7) {
+  transform: rotate(36deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(8) {
+  transform: rotate(42deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(9) {
+  transform: rotate(48deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(10) {
+  transform: rotate(54deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(11) {
+  transform: rotate(60deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(12) {
+  transform: rotate(66deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(13) {
+  transform: rotate(72deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(14) {
+  transform: rotate(78deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(15) {
+  transform: rotate(84deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(16) {
+  transform: rotate(90deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(17) {
+  transform: rotate(96deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(18) {
+  transform: rotate(102deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(19) {
+  transform: rotate(108deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(20) {
+  transform: rotate(114deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(21) {
+  transform: rotate(120deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(22) {
+  transform: rotate(126deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(23) {
+  transform: rotate(132deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(24) {
+  transform: rotate(138deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(25) {
+  transform: rotate(144deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(26) {
+  transform: rotate(150deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(27) {
+  transform: rotate(156deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(28) {
+  transform: rotate(162deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(29) {
+  transform: rotate(168deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(30) {
+  transform: rotate(174deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(31) {
+  transform: rotate(180deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(32) {
+  transform: rotate(186deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(33) {
+  transform: rotate(192deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(34) {
+  transform: rotate(198deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(35) {
+  transform: rotate(204deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(36) {
+  transform: rotate(210deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(37) {
+  transform: rotate(216deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(38) {
+  transform: rotate(222deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(39) {
+  transform: rotate(228deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(40) {
+  transform: rotate(234deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(41) {
+  transform: rotate(240deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(42) {
+  transform: rotate(246deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(43) {
+  transform: rotate(252deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(44) {
+  transform: rotate(258deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(45) {
+  transform: rotate(264deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(46) {
+  transform: rotate(270deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(47) {
+  transform: rotate(276deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(48) {
+  transform: rotate(282deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(49) {
+  transform: rotate(288deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(50) {
+  transform: rotate(294deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(51) {
+  transform: rotate(300deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(52) {
+  transform: rotate(306deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(53) {
+  transform: rotate(312deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(54) {
+  transform: rotate(318deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(55) {
+  transform: rotate(324deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(56) {
+  transform: rotate(330deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(57) {
+  transform: rotate(336deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(58) {
+  transform: rotate(342deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(59) {
+  transform: rotate(348deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+.clock-minute:nth-child(60) {
+  transform: rotate(354deg) translateY(calc(var(--size-clock) * var(--minute-mul-distance)));
+}
+
+.clock-hour-wrapper {
+  position: relative;
+  height: 70%;
+  width: 70%;
+  border-radius: 50%;
+  background-color: rgba(104, 155, 15, 0.6156862745);
+  z-index: 104;
+}
+
+.clock-hour {
+  position: absolute;
+  color: aliceblue;
+}
+
+.clock-hour:nth-child(1) {
+  transform: rotate(0deg) translateY(calc(var(--size-clock) * var(--hour-mul-distance)));
+}
+.clock-hour:nth-child(2) {
+  transform: rotate(15deg) translateY(calc(var(--size-clock) * var(--hour-mul-distance)));
+}
+.clock-hour:nth-child(3) {
+  transform: rotate(30deg) translateY(calc(var(--size-clock) * var(--hour-mul-distance)));
+}
+.clock-hour:nth-child(4) {
+  transform: rotate(45deg) translateY(calc(var(--size-clock) * var(--hour-mul-distance)));
+}
+.clock-hour:nth-child(5) {
+  transform: rotate(60deg) translateY(calc(var(--size-clock) * var(--hour-mul-distance)));
+}
+.clock-hour:nth-child(6) {
+  transform: rotate(75deg) translateY(calc(var(--size-clock) * var(--hour-mul-distance)));
+}
+.clock-hour:nth-child(7) {
+  transform: rotate(90deg) translateY(calc(var(--size-clock) * var(--hour-mul-distance)));
+}
+.clock-hour:nth-child(8) {
+  transform: rotate(105deg) translateY(calc(var(--size-clock) * var(--hour-mul-distance)));
+}
+.clock-hour:nth-child(9) {
+  transform: rotate(120deg) translateY(calc(var(--size-clock) * var(--hour-mul-distance)));
+}
+.clock-hour:nth-child(10) {
+  transform: rotate(135deg) translateY(calc(var(--size-clock) * var(--hour-mul-distance)));
+}
+.clock-hour:nth-child(11) {
+  transform: rotate(150deg) translateY(calc(var(--size-clock) * var(--hour-mul-distance)));
+}
+.clock-hour:nth-child(12) {
+  transform: rotate(165deg) translateY(calc(var(--size-clock) * var(--hour-mul-distance)));
+}
+.clock-hour:nth-child(13) {
+  transform: rotate(180deg) translateY(calc(var(--size-clock) * var(--hour-mul-distance)));
+}
+.clock-hour:nth-child(14) {
+  transform: rotate(195deg) translateY(calc(var(--size-clock) * var(--hour-mul-distance)));
+}
+.clock-hour:nth-child(15) {
+  transform: rotate(210deg) translateY(calc(var(--size-clock) * var(--hour-mul-distance)));
+}
+.clock-hour:nth-child(16) {
+  transform: rotate(225deg) translateY(calc(var(--size-clock) * var(--hour-mul-distance)));
+}
+.clock-hour:nth-child(17) {
+  transform: rotate(240deg) translateY(calc(var(--size-clock) * var(--hour-mul-distance)));
+}
+.clock-hour:nth-child(18) {
+  transform: rotate(255deg) translateY(calc(var(--size-clock) * var(--hour-mul-distance)));
+}
+.clock-hour:nth-child(19) {
+  transform: rotate(270deg) translateY(calc(var(--size-clock) * var(--hour-mul-distance)));
+}
+.clock-hour:nth-child(20) {
+  transform: rotate(285deg) translateY(calc(var(--size-clock) * var(--hour-mul-distance)));
+}
+.clock-hour:nth-child(21) {
+  transform: rotate(300deg) translateY(calc(var(--size-clock) * var(--hour-mul-distance)));
+}
+.clock-hour:nth-child(22) {
+  transform: rotate(315deg) translateY(calc(var(--size-clock) * var(--hour-mul-distance)));
+}
+.clock-hour:nth-child(23) {
+  transform: rotate(330deg) translateY(calc(var(--size-clock) * var(--hour-mul-distance)));
+}
+.clock-hour:nth-child(24) {
+  transform: rotate(345deg) translateY(calc(var(--size-clock) * var(--hour-mul-distance)));
+}
+
+.clock-wand-in-wrapper {
+  position: absolute;
+  height: 40%;
+  width: 40%;
+  border-radius: 50%;
+  background-color: rgba(104, 155, 15, 0.6156862745);
+  z-index: 105;
+}
+
+.clock-wand-in {
+  position: absolute;
+  color: aliceblue;
+}
+
+.clock-wand-in:nth-child(1) {
+  transform: rotate(0deg) translateY(calc(var(--size-clock) * var(--wand-in-mul-distance)));
+}
+.clock-wand-in:nth-child(2) {
+  transform: rotate(15deg) translateY(calc(var(--size-clock) * var(--wand-in-mul-distance)));
+}
+.clock-wand-in:nth-child(3) {
+  transform: rotate(30deg) translateY(calc(var(--size-clock) * var(--wand-in-mul-distance)));
+}
+.clock-wand-in:nth-child(4) {
+  transform: rotate(45deg) translateY(calc(var(--size-clock) * var(--wand-in-mul-distance)));
+}
+.clock-wand-in:nth-child(5) {
+  transform: rotate(60deg) translateY(calc(var(--size-clock) * var(--wand-in-mul-distance)));
+}
+.clock-wand-in:nth-child(6) {
+  transform: rotate(75deg) translateY(calc(var(--size-clock) * var(--wand-in-mul-distance)));
+}
+.clock-wand-in:nth-child(7) {
+  transform: rotate(90deg) translateY(calc(var(--size-clock) * var(--wand-in-mul-distance)));
+}
+.clock-wand-in:nth-child(8) {
+  transform: rotate(105deg) translateY(calc(var(--size-clock) * var(--wand-in-mul-distance)));
+}
+.clock-wand-in:nth-child(9) {
+  transform: rotate(120deg) translateY(calc(var(--size-clock) * var(--wand-in-mul-distance)));
+}
+.clock-wand-in:nth-child(10) {
+  transform: rotate(135deg) translateY(calc(var(--size-clock) * var(--wand-in-mul-distance)));
+}
+.clock-wand-in:nth-child(11) {
+  transform: rotate(150deg) translateY(calc(var(--size-clock) * var(--wand-in-mul-distance)));
+}
+.clock-wand-in:nth-child(12) {
+  transform: rotate(165deg) translateY(calc(var(--size-clock) * var(--wand-in-mul-distance)));
+}
+.clock-wand-in:nth-child(13) {
+  transform: rotate(180deg) translateY(calc(var(--size-clock) * var(--wand-in-mul-distance)));
+}
+.clock-wand-in:nth-child(14) {
+  transform: rotate(195deg) translateY(calc(var(--size-clock) * var(--wand-in-mul-distance)));
+}
+.clock-wand-in:nth-child(15) {
+  transform: rotate(210deg) translateY(calc(var(--size-clock) * var(--wand-in-mul-distance)));
+}
+.clock-wand-in:nth-child(16) {
+  transform: rotate(225deg) translateY(calc(var(--size-clock) * var(--wand-in-mul-distance)));
+}
+.clock-wand-in:nth-child(17) {
+  transform: rotate(240deg) translateY(calc(var(--size-clock) * var(--wand-in-mul-distance)));
+}
+.clock-wand-in:nth-child(18) {
+  transform: rotate(255deg) translateY(calc(var(--size-clock) * var(--wand-in-mul-distance)));
+}
+.clock-wand-in:nth-child(19) {
+  transform: rotate(270deg) translateY(calc(var(--size-clock) * var(--wand-in-mul-distance)));
+}
+.clock-wand-in:nth-child(20) {
+  transform: rotate(285deg) translateY(calc(var(--size-clock) * var(--wand-in-mul-distance)));
+}
+.clock-wand-in:nth-child(21) {
+  transform: rotate(300deg) translateY(calc(var(--size-clock) * var(--wand-in-mul-distance)));
+}
+.clock-wand-in:nth-child(22) {
+  transform: rotate(315deg) translateY(calc(var(--size-clock) * var(--wand-in-mul-distance)));
+}
+.clock-wand-in:nth-child(23) {
+  transform: rotate(330deg) translateY(calc(var(--size-clock) * var(--wand-in-mul-distance)));
+}
+.clock-wand-in:nth-child(24) {
+  transform: rotate(345deg) translateY(calc(var(--size-clock) * var(--wand-in-mul-distance)));
+}
+
+.clock-center {
+  position: absolute;
+  height: 5%;
+  width: 5%;
+  border-radius: 50%;
+  background-color: black;
+  z-index: 106;
+}
+
+.clock-arrow {
+  position: absolute;
+  top: calc(var(--size-clock) / 2 - 22%);
+  height: 22%;
+  width: 0.5%;
+  background-color: black;
+  z-index: 107;
+}
+
+/*# sourceMappingURL=index.css.map */
